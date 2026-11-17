@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Superagent Playground</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <h1 id="title">Superagent Playground</h1>
+    <p class="lead">这个页面用来测试 dsh-superagent 能不能真的改代码。</p>
+    <button id="action">点我</button>
+    <p id="output" class="output"></p>
+  </main>
+  <script type="module">
+    import { greet } from './src/greet.js'
+    document.getElementById('action').addEventListener('click', () => {
+      document.getElementById('output').textContent = greet('世界')
+    })
+  </script>
+</body>
+</html>
